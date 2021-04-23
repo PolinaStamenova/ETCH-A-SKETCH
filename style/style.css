@@ -1,42 +1,19 @@
-/*
-    ==============================================
-                ****** RESET ******
-    ==============================================
-*/
 body {
   margin: 0;
-}
-
-:root {
-  --color-red: #f42;
-  --bg-color-red: #f42;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
-}
+/* #container {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  height: fit-content;
+} */
 
-a {
-  text-decoration: none;
-  color: white;
+#container {
+  margin-top: 2rem;
+  display: grid;
+  grid-gap: 0;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
-
-a:hover {
-  color: #333;
-}
-
-/*
-    ==============================================
-                ****** GLOBAL ******
-    ==============================================
-*/
