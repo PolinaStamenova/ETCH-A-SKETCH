@@ -3,7 +3,7 @@ function grid () {
     let body = document.querySelector("body");
     let container = document.createElement('div');
     container.setAttribute('id', 'container')
-    container.style.backgroundColor = 'green';
+    // container.style.backgroundColor = 'green';
     container.style.width = '400px';
     container.style.height = '400px';
     body.appendChild(container);
@@ -31,15 +31,23 @@ function makeRowsCols(rows, cols) {
         container.appendChild(div);
 
         //  ======== COLORFULL ========
-        var color = [, "#3C9EE7", "#E7993C", 
-        "#E73C99", "#3CE746", "#E7993C"];
+        // var color = [, "#3C9EE7", "#E7993C", 
+        // "#E73C99", "#3CE746", "#E7993C"];
+        // div.addEventListener('mouseover', function (e) {
+        //     e.target.style.background = color[Math.floor(Math.random() * color.length)];
+        // });
+
+        //  ======== White ---> Black ========
         div.addEventListener('mouseover', function (e) {
-            e.target.style.background = color[Math.floor(Math.random() * color.length)];
-        });
+            let x = 0.1;
+            let color = `rgba(0, 0, 0, ${x})`;
+            x += 0.1;
+            e.target.style.background = color;
+        });     
     };
 };
 
-function polina(){
+function deleteGridBtn(){
     makeRowsCols(0,0);
     // div.style.backgroundColor = 'white';
     let deleteDiv = document.querySelector('#container');
@@ -47,6 +55,5 @@ function polina(){
     grid ();
 }
 
-
 let button = document.querySelector('#button');
-button.addEventListener('click', polina);
+button.addEventListener('click', deleteGridBtn);
