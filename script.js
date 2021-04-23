@@ -29,9 +29,13 @@ function makeRowsCols(rows, cols) {
         div.setAttribute('class', 'div00')
         div.style.backgroundColor = 'white';
         container.appendChild(div);
+
+        //  ======== COLORFULL ========
+        var color = [, "#3C9EE7", "#E7993C", 
+        "#E73C99", "#3CE746", "#E7993C"];
         div.addEventListener('mouseover', function (e) {
-            e.target.style.background = 'skyblue';
-          });
+            e.target.style.background = color[Math.floor(Math.random() * color.length)];
+        });
     };
 };
 
