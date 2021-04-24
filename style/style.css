@@ -113,11 +113,12 @@ input:hover {
 }
 
 .author {
-  position: absolute;
+  display: inline-block;
   color: white;
   font-family: "Italianno", cursive;
   font-size: 50px;
   transform: rotate(340deg);
-  bottom: 2rem;
-  right: 0;
+  position: absolute;
+  bottom: 3rem;
+  right: 2rem;
 }
