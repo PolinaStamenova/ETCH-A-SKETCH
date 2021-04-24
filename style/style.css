@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("../image/bggg.jpg");
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   background-color: grey;
 }
 
