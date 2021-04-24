@@ -3,19 +3,19 @@ function grid () {
     let body = document.querySelector("#board");
     let container = document.createElement('div');
     container.setAttribute('id', 'container')
-    // container.style.backgroundColor = 'green';
     container.style.width = '250px';
     container.style.height = '250px';
     body.appendChild(container);
 
-    let number = 100;
-    // let number = prompt('Please, enter your number');
+    let number = prompt('Please, enter your number between 2 and 100');
     
-    // if ((number > 100) || (number < 2)) { 
-    //     alert ('Choose a number between 2 and 100');
-    //     prompt('Please, enter your number');
-    //     number = number;
-    // }
+    if ((number > 100) || (number < 2)) { 
+        alert ('Choose a number between 2 and 100');
+       do { 
+           number = prompt('Please, enter your number between 2 and 100')
+          
+       }while ((number > 100) || (number < 2));
+    }
     
 makeRowsCols(number, number);
 }
@@ -55,7 +55,6 @@ function makeRowsCols(rows, cols) {
 
 function deleteGridBtn(){
     makeRowsCols(0,0);
-    // div.style.backgroundColor = 'white';
     let deleteDiv = document.querySelector('#container');
     deleteDiv.remove();
     grid ();
