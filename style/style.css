@@ -1,12 +1,123 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url(/image/bggg.jpg);
+
+  background-color: grey;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Codystar", cursive;
+  font-size: 26px;
+  font-weight: bold;
+  background-color: rgb(11, 3, 12);
+  display: inline-block;
+  padding: 0 0.5rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.747);
+}
+h1::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgb(255, 0, 179),
+    #ebf8e1 1%,
+    blue 2%,
+    rgb(255, 255, 0) 2%
+  );
+  border-radius: 10px;
+}
+
+h1 span {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: bold;
+  color: deeppink;
+  font-size: 36px;
 }
 
 #container {
-  margin-top: 2rem;
   display: grid;
   grid-gap: 0;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
+  padding-top: 0.6rem;
+  padding-left: 0.4rem;
+}
+#container:hover {
+  cursor: url("/image/paintbrush.png"), auto;
+}
+.painting {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#button {
+  margin-top: 1rem;
+}
+.sponge {
+  border: none;
+}
+
+.frame-board {
+  margin-left: 10rem;
+  margin-right: 2rem;
+}
+
+#board {
+  background-image: url(/image//161918679582862931.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 256px;
+  height: 352px;
+}
+
+.attributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+input {
+  width: 4rem;
+  height: 2rem;
+}
+input:hover {
+  cursor: pointer;
+}
+
+#button:hover {
+  cursor: pointer;
+}
+.paints {
+  display: flex;
+  flex-direction: column;
+}
+.clean {
+  position: relative;
+  margin-top: 2rem;
+}
+#button {
+  position: absolute;
+  z-index: 9;
+  bottom: 0;
+  left: 70px;
+}
+
+.author {
+  position: absolute;
+  color: white;
+  font-family: "Italianno", cursive;
+  font-size: 50px;
+  transform: rotate(340deg);
+  bottom: 2rem;
+  right: 0;
 }

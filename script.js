@@ -1,20 +1,21 @@
 
 function grid () {
-    let body = document.querySelector("body");
+    let body = document.querySelector("#board");
     let container = document.createElement('div');
     container.setAttribute('id', 'container')
     // container.style.backgroundColor = 'green';
-    container.style.width = '400px';
-    container.style.height = '400px';
+    container.style.width = '250px';
+    container.style.height = '250px';
     body.appendChild(container);
 
-    let number = prompt('Please, enter your number');
+    let number = 100;
+    // let number = prompt('Please, enter your number');
     
-    if ((number > 100) || (number < 2)) { 
-        alert ('Choose a number between 2 and 100');
-        prompt('Please, enter your number');
-        number = number;
-    }
+    // if ((number > 100) || (number < 2)) { 
+    //     alert ('Choose a number between 2 and 100');
+    //     prompt('Please, enter your number');
+    //     number = number;
+    // }
     
 makeRowsCols(number, number);
 }
@@ -38,11 +39,16 @@ function makeRowsCols(rows, cols) {
         // });
 
         //  ======== White ---> Black ========
+        // div.addEventListener('mouseover', function (e) {
+        //     let x = 0.1;
+        //     let color = `rgba(0, 0, 0, ${x})`;
+        //     x += 0.1;
+        //     e.target.style.background = color;
+        // });    
+        
         div.addEventListener('mouseover', function (e) {
-            let x = 0.1;
-            let color = `rgba(0, 0, 0, ${x})`;
-            x += 0.1;
-            e.target.style.background = color;
+            let color = document.getElementById('favcolor');
+            e.target.style.background = color.value;
         });     
     };
 };

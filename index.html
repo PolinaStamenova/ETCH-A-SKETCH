@@ -4,19 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="#" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charmonman&family=Courgette&family=Sacramento&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Codystar&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="style/style.css" />
     <title>ETCH-A-SKETCH</title>
   </head>
 
-  <body>
-    <p>Choose a color:</p>
-    <p>Press the button to delete the current grid.</p>
-    <button type="button" id="button">Delete</button>
-
+  <body class="text-center">
+    <h1>Wellcome to the <span>ART</span> club</h1>
+    <div class="painting">
+      <div class="frame-board">
+        <div id="board"></div>
+      </div>
+      <div class="attributes">
+        <div class="paints">
+          <img src="/image/tube.jpg" alt="Tube" width="100px" height="80px" />
+          <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+        </div>
+        <div class="clean">
+          <img src="/image/bucket.jpg" alt="Bucket" width="150px;" />
+          <img
+            src="/image/sponge.jpg"
+            alt=""
+            width="100px"
+            height="50px"
+            id="button"
+          />
+        </div>
+      </div>
+    </div>
+    <p class="author">Created by P.S &#10084;</p>
     <script src="script.js"></script>
   </body>
 </html>
