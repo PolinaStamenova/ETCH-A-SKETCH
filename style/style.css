@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("/image/bggg.jpg");
+  background-image: url(/image/bggg.jpg);
   background-color: grey;
 }
 
@@ -51,7 +51,7 @@ h1 span {
   padding-left: 0.4rem;
 }
 #container:hover {
-  cursor: url("/image/paintbrush.png"), auto;
+  cursor: url(/image/paintbrush.png), auto;
 }
 .painting {
   display: flex;
@@ -71,7 +71,7 @@ h1 span {
 }
 
 #board {
-  background-image: url("/image/161918679582862931.png");
+  background-image: url(/image/161918679582862931.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 256px;
